@@ -2,68 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>TVessels flying “flags of convenience” arriving in New York</title>
+    <title>Vessels using “flags of convenience” arriving in New York</title>
     <style>
         body {
             margin: 0;
-            background-color: aliceblue;
-        }
-        /* Make the page 700px wide, centered */
-        .container {
-            width: 700px;
-            margin: 4em auto;
-        }
-        /* Use a nice font */
-        body {
+            background-color: #d1d8e0;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
-        h1 {
+        .container {
+    width: 700px;        /* was 850px — now MUCH more centered */
+    margin: 4em auto;
+    padding: 5em;
+    border: 4px solid #d1d8e0;
+    border-radius: 4px;
+    background: #d1d8e0;
+}
+
+        h2 {
             text-align: center;
-            font-size: 3em;
-            margin: 2em 0;
+            margin-bottom: 2em;
+            white-space: nowrap;
         }
 
-        .graphic {
-            max-width: 500px;
-            margin: 2em auto;
+        /* Two-column layout */
+        .layout {
+            display: flex;
+            gap: 2em;
+        }
+
+        .left-column {
+            flex: 1;
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+
+        .text-box {
+            background: rgb(235, 237, 238);
+            padding: 1em 1.5em;
+            border: 3px solid #1f2f3f;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         }
 
         #footer {
             text-align: center;
             padding: 4em;
-            background-color: #f0f1ff;
-            border-top: solid white 5px;
+            background-color: #d1d8e0;
         }
     </style>
 </head>
-
-<center>
-        <marquee behavior="alternate" direction="left">
-            <img src=
-"https://www.shutterstock.com/image-vector/pixel-art-factory-on-ship-260nw-2479696071.jpg"
-                alt="GeeksforGeeks logo">
-        </marquee>
-
-        <marquee behavior="alternate" direction="right">
-            <img src=
-"https://www.shutterstock.com/image-vector/pixel-art-factory-on-ship-260nw-2479696071.jpg"
-                alt="GeeksforGeeks logo">
-        </marquee>
-    </center>
-
 <body>
     <div class="container">
-        <h1>⚓ Vessels flying “flags of convenience” arriving in New York 🚢</h1>
-        <h3>Most popular FoCs expected to arrive at the Port of New York</h3>
-        <p>Dozens of nations allow their flags to be registered and flown by ships originating from other countries, allowing them to skirt more stringent labor, taxation and environmental requirements in their countries of origin. These vessels dock in New York daily. </p>
-        <p>FoCs allow illegal maritime activities (such as drug smuggling and human trafficking) to proliferate, in particular in relation to extractive industries such as fishing. Flying flags from countries that oftentimes are landlocked, without a fishing industry, allows vessels with FoCs to commit crimes in international waters without a traceable identity. As a result, such crimes go unpunished and uninterrupted. </p>
-        <p>Flags of convenience are bought via open registry, often from poorer nations. The seven countries most utilized/popular for FoCs are filtered for here: Panama, Marshall Islands, Antigua and Barbuda, the Bahamas, Liberia, Malta and Cyprus, although there are upwards of 48 nations popular for their FoCs. 
-</p>
-        <div class="graphic">
-<iframe title="Vessels flying “flags of convenience” arriving in New York" aria-label="Table" id="datawrapper-chart-2KdKK" src="https://datawrapper.dwcdn.net/2KdKK/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1074" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>        </div>
+        <h2>⚓ "Flag of convenience" vessels in NYC, updated hourly: 🚢</h2>
+
+        <div class="layout">
+            <!-- LEFT COLUMN: Chart -->
+            <div class="left-column">
+                <iframe title="Vessels flying 'flags of convenience' arriving in New York" aria-label="Table" id="datawrapper-chart-2KdKK" src="https://datawrapper.dwcdn.net/2KdKK/2/" scrolling="no" frameborder="0" style="width: 100%; border: none;" height="979" data-external="1"></iframe>
+            </div>
+
+            <!-- RIGHT COLUMN: Text Boxes -->
+            <div class="right-column">
+                <div class="text-box">
+                    <h3>What are "flags of convenience"?</h3>
+                    <p>Dozens of nations allow their flags to be registered and flown by ships originating from other countries, allowing them to skirt more stringent labor, taxation and environmental requirements.</p>
+                </div>
+
+                <div class="text-box">
+                    <h3> How are they used?</h3>
+                    <p>FoCs allow illegal maritime activities (such as drug smuggling and human trafficking) to proliferate, especially in the fishing industry. Ships can operate in international waters without a traceable identity, leaving subsequent crimes unpunished. Most commonly, FoCs are used in fishing, supplying New Yorkers with all sorts of seafood.</p>
+                </div>
+
+                <div class="text-box">
+                    <h3>Who uses them?</h3>
+                    <p>The seven countries most utilized/popular for FoCs include Panama, Marshall Islands, Antigua & Barbuda, Bahamas, Liberia, Malta and Cyprus are displayed here — though more than 48 nations offer open ship registries.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>This website was with a tutorial on auto-updating websites.</p>
+        </div>
     </div>
-    <div id="footer">
-        <p>This website was made for a tutorial on <a href="https://jonathansoma.com">auto-updating websites</a>.</p>
-    </div>
+</body>
 </html>
